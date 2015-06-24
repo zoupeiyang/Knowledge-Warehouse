@@ -1082,9 +1082,18 @@
 <!--[if IE]>
 <script type="text/javascript">
     window.jQuery || document.write("<script src='__PUBLIC__/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+
 </script>
 <![endif]-->
 <script type="text/javascript">
+
+    //处理当前菜单哪个处于激活状态
+    window.onload=function()
+    {
+        //可读取隐藏的input值
+      // $("#gallery").removeClass("active");
+       // alert(abc);
+    }
     if('ontouchstart' in document.documentElement) document.write("<script src='__PUBLIC__/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>
 <script src="__PUBLIC__/assets/js/bootstrap.min.js"></script>
@@ -1099,7 +1108,7 @@
 <link rel="stylesheet" href="__PUBLIC__/assets/css/ace.onpage-help.css" />
 <link rel="stylesheet" href="__PUBLIC__/docs/assets/js/themes/sunburst.css" />
 
-<script type="text/javascript"> ace.vars['base'] = '..'; </script>
+<script type="text/javascript"> ace.vars['base'] = '__PUBLIC__'; </script>
 <script src="__PUBLIC__/assets/js/ace/ace.onpage-help.js"></script>
 <script src="__PUBLIC__/docs/assets/js/rainbow.js"></script>
 <script src="__PUBLIC__/docs/assets/js/language/generic.js"></script>
