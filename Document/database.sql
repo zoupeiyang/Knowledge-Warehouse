@@ -40,3 +40,41 @@ create table `users`(
   PRIMARY KEY  (`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+CREATE TABLE `menu` (
+  `ID` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `MenuName` varchar(15) NOT NULL,
+  `BkParentID` smallint(5) unsigned NOT NULL,
+  `GnParentID` smallint(5) unsigned NOT NULL,
+  `LinkUrl` varchar(80) DEFAULT NULL,
+  `OrderID` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `IsShow` tinyint(1) NOT NULL DEFAULT '1',
+  `Module` varchar(20) Default null,
+  `Controller` varchar(20) DEFAULT NULL,
+  `Action` varchar(20) DEFAULT NULL,
+  `Param` varchar(20) default null,
+  `AddTime` datetime DEFAULT NULL,
+  `AddMan` varchar(15) DEFAULT 'Admin',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `menu_action` (
+  `ID` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `ActionName` varchar(15) DEFAULT NULL,
+  `ParentID` smallint(5) unsigned DEFAULT NULL,
+  `Controller` varchar(20) DEFAULT NULL,
+  `Action` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `menu_group` (
+  `ID` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `GroupName` varchar(15) NOT NULL,
+  `ParentID` smallint(5) unsigned DEFAULT NULL,
+  `OrderID` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `IsShow` tinyint(1) NOT NULL DEFAULT '1',
+  `AddTime` datetime DEFAULT NULL,
+  `AddMan` varchar(15) DEFAULT 'Admin',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+
