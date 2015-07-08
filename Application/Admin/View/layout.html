@@ -753,7 +753,7 @@
             </li>
 
             <li class="active">
-                <a href="http://localhost:63342/Knowledge-Warehouse/index.php/?m=admin&c=index&a=index">
+                <a href="__APP__/?m=admin&c=index&a=index">
                     <i class="menu-icon fa fa-picture-o"></i>
                     <span class="menu-text"> Gallery </span>
                 </a>
@@ -1031,8 +1031,23 @@
             </div><!-- /.ace-settings-container -->
 
             <!-- /section:settings.box -->
+            <div class="page-header">
+                <h1>
+                    {$parent_title}
+                    <small>
+                        <i class="ace-icon fa fa-angle-double-right"></i>
+                        {$current_title}
+                    </small>
+                </h1>
+            </div><!-- /.page-header -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- PAGE CONTENT BEGINS -->
             {__CONTENT__}
 
+                    <!-- PAGE CONTENT ENDS -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
         </div><!-- /.page-content -->
     </div><!-- /.main-content -->
 
