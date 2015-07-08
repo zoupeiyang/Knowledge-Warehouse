@@ -2,7 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 class MenuController extends Controller {
-    private $parent_title="系统设置";
+    private $parent_title="菜单设置";
     public function index(){
 
         $menus = M('menu')->select();
@@ -14,9 +14,9 @@ class MenuController extends Controller {
 
     public function add_menu()
     {
-       // $this->redirect(__SELF__.'/index');
-        echo __MODULE__;
-        exit;
+
+        $dd= U('index');
+       // exit;
         if(IS_POST)
         {
             $menu=M('menu');
@@ -25,9 +25,7 @@ class MenuController extends Controller {
             $data=$menu->add();
             if($data)
             {
-                echo __ROOT__.__CONTROLLER__;
-                exit;
-                $this->redirect(__CONTROLLER__.'/index');
+                $this->redirect($dd);
             }
             else
             {
