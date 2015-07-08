@@ -14,8 +14,32 @@ class MenuController extends Controller {
 
     public function add_menu()
     {
-        $this->assign('parent_title',$this->parent_title);
-        $this->assign('current_title',"添加菜单");
-        $this->display();
+       // $this->redirect(__SELF__.'/index');
+        echo __MODULE__;
+        exit;
+        if(IS_POST)
+        {
+            $menu=M('menu');
+            $menu->create();
+            $menu->parent_id=0;
+            $data=$menu->add();
+            if($data)
+            {
+                echo __ROOT__.__CONTROLLER__;
+                exit;
+                $this->redirect(__CONTROLLER__.'/index');
+            }
+            else
+            {
+                $this->error();
+            }
+        }
+        else
+        {
+            $this->assign('parent_title',$this->parent_title);
+            $this->assign('current_title',"添加菜单");
+            $this->display();
+        }
+
     }
 }
