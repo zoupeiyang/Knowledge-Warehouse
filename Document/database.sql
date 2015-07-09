@@ -53,7 +53,7 @@ create table `menu`(
 `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP comment '创建时间',
 `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP comment '更新时间',
 `order_id`smallint(5) unsigned NOT NULL DEFAULT '0'comment '排序号，越大越靠前',
-`is_show` tinyint(1) NOT NULL DEFAULT ‘0’ comment '是否显示,0表示显示,1表示不显示',
+`is_show` tinyint(1) NOT NULL DEFAULT '0' comment '是否显示,0表示显示,1表示不显示',
 primary key (`id`)
 
 )
