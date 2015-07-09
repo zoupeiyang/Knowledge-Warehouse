@@ -47,16 +47,16 @@
                             <td class="hidden-480">{$vo.controller_name}</td>
 
                             <td>
-                               <eq name="vo.is_show" value="1"> <span class="label label-sm label-success">显示</span><else/> <span class="label label-sm label-grey">隐藏</span></eq>
+                               <eq name="vo.is_show" value="0"> <span class="label label-sm label-success">显示</span><else/> <span class="label label-sm label-grey">隐藏</span></eq>
                             </td>
 
                             <td>
                                 <div class="hidden-sm hidden-xs btn-group">
 
 
-                                    <button class="btn btn-xs btn-info" style="margin-right: 10px;">
+                                    <a href="{:U('menu_edit')}&id={$vo.id}" class="btn btn-xs btn-info" style="margin-right: 10px;">
                                         <i class="ace-icon fa fa-pencil bigger-120">&nbsp;编辑</i>
-                                    </button>
+                                    </a>
 
                                     <button  class="btn btn-xs btn-danger" style="margin-right: 10px;">
                                         <i class="ace-icon fa fa-trash-o bigger-120">&nbsp;删除</i>
@@ -106,7 +106,7 @@
 
                 </div>
                 <div class=" no-padding-left no-padding-top" style="padding:5px;">
-                    <a href="{:U('add_menu')}" class="btn btn-info btn-sm">添加菜单</a>
+                    <a href="{:U('menu_add')}" class="btn btn-info btn-sm">添加菜单</a>
                 </div>
             </div>
         </div>
